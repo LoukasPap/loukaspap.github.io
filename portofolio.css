@@ -3,6 +3,7 @@
 	--androidColor: #3DDC84;
 	--javaColor: #B07219;
 	--kotlinColor: #A97BFF;
+	--intrasoftColor: #2949db;
 }
 
 body {
@@ -11,12 +12,10 @@ body {
 		sans-serif;
 	font-size: calc(10px + 0.33vw);
 	-webkit-font-smoothing: antialiased;
-	padding: 5vh 10vw;
+	padding: 3vh 10vw;
 	color: #121314;
 }
 
-.cursor-svg{
-}
 
 h1 {
 	font-size: 4.5em;
@@ -59,7 +58,8 @@ a {
 	color: #121314;
 	position: relative;
 }
-a:after {
+
+.semi-color:after {
 	content: '';
 	position: absolute;
 	z-index: -1;
@@ -84,12 +84,16 @@ a:hover:after {
     background-image: linear-gradient(to right, white, var(--deepocean));
     background-position: 0% 100%;
     background-repeat: no-repeat;
-    background-size: 0% 2px;
-    transition: background-size .3s;
+    background-size: 0% 4px;
+    transition: background-size .5s;
 }
 
 #major:hover, #major:focus {
-    background-size: 100% 2px;
+    background-size: 100% 4px;
+}
+
+.intrasoft {
+	color: var(--intrasoftColor);
 }
 
 .android:hover {
