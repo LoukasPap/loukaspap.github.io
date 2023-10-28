@@ -6,6 +6,10 @@
 	--intrasoftColor: #2949db;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+  
 body {
 	font-family: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI',
 		Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
@@ -13,7 +17,7 @@ body {
 	font-size: calc(10px + 0.33vw);
 	-webkit-font-smoothing: antialiased;
 	padding: 3vh 10vw;
-	color: #121314;
+	background: #F0F0F4;
 }
 
 
@@ -104,4 +108,132 @@ a:hover:after {
 }
 .kotlin:hover {
 	color: var(--kotlinColor);
+}
+
+
+.projects-container {
+	display: inline-flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 60px;
+
+}
+
+.project-card {
+	width: 230px;
+	height: 370px;
+
+	background: #6764E5;
+	/* background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 53.12%, #000 53.14%); */
+	
+	/* background-image: url('./assets/images/algorithms-flat.png'); */
+	background-size: 100%;
+	transform: scale(1);
+	
+	border-radius: 20px;
+	transition: background 0.5s, transform 0.5s, outline 0.2s;
+
+	outline: solid rgba(0, 0, 0, 0);
+
+	overflow: hidden;
+}
+
+
+.project-card:hover > .up-box{
+	transform: translateY(-135px);
+}
+
+.project-card:hover > .lottie{
+	opacity: 100%;
+}
+
+.project-card:hover {
+	/* transform: scale(1.05); */
+	outline: solid rgba(0, 0, 0, 1);
+
+}
+
+.lottie {
+	width: 60px;
+	height: 60px;
+	border-radius: 50px;
+	position: absolute;
+	opacity: 0%;
+	transition: opacity 0.2s
+}
+
+
+.text-layout {
+	width: 180px;
+	height: 125px;
+	
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	gap: 2.5px;
+	margin: 0 auto;
+	/* margin-top: 225px; */
+	margin-top: 230px;
+
+
+	
+	/* for debugging */
+	/* outline-style: solid;  */
+}
+
+#course-title {
+	/* width: 165px; */
+	width: inherit;
+	color: #FFF;
+	
+	justify-content: flex-end;
+	text-align: left;
+	
+	font-size: 1.2em;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+	z-index: 1;
+	transition: color 0.2s;
+
+	/* text-shadow: 2px; */
+}
+
+#course-description {
+	width: inherit;
+	/* width: 155px; */
+	color: #FFF;
+	text-align: left;
+
+	font-size: 1em;
+	font-style: normal;
+	font-weight: 300;
+	line-height: normal;
+
+	/* padding-bottom: 20px; */
+	z-index: 1;
+
+}
+
+.up-box {
+	width: inherit;
+	height: 180px;
+	transform: translateY(50px);
+	transition: transform cubic-bezier(0,0,0,1) 0.5s;
+	background-color: black;
+}
+
+
+#glass-box {
+	width: 190px;
+	height: 60px;
+	position: absolute;
+	z-index: 0;
+
+	border-radius: 10px;
+	background: rgba(238, 238, 238, 0.40);
+	backdrop-filter: blur(5.5px);
 }
