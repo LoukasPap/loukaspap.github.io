@@ -4,6 +4,7 @@
 	--javaColor: #B07219;
 	--kotlinColor: #A97BFF;
 	--intrasoftColor: #2949db;
+	--rustColor: #DEA584;
 }
 
 html {
@@ -109,6 +110,22 @@ a:hover:after {
 .kotlin:hover {
 	color: var(--kotlinColor);
 }
+.rust:hover {
+	color: var(--rustColor);
+}
+
+.rust:hover ~ #rust-crab {
+	/* visibility: visible; */
+	/* opacity: 1; */
+	width: 1.1em;
+	/* animation: crabAnimation 0.5s ease-in-out; */
+}
+#rust-crab {
+	/* visibility: collapse; */
+	/* opacity: 0; */
+	width: 0em;
+}
+
 
 
 .projects-container {
